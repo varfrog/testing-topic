@@ -24,6 +24,7 @@ class ControllerTest extends TestCase
         $wordNumberer
             ->expects(self::any())
             ->method('numberWords')
+            ->with('there hello')
             ->willReturn('there1 hello2')
         ;
 

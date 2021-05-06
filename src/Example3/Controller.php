@@ -15,8 +15,6 @@ class Controller
 
     public function getDisplayText(): string
     {
-        $this->wordReverser->reverseWords($this->displayText);
-
-        return $this->wordNumberer->numberWords($this->displayText);
+        return $this->wordNumberer->numberWords($this->wordReverser->reverseWords($this->displayText));
     }
 }

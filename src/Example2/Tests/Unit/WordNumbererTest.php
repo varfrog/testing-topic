@@ -12,5 +12,6 @@ class WordNumbererTest extends TestCase
     public function testFormat()
     {
         self::assertSame('a1 b2 c3', (new WordNumberer())->numberWords('a b c'));
+        self::assertSame('Ann1 Bob2 Carl3', (new WordNumberer())->numberWords('Ann Bob Carl'));
     }
 }
